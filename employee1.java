@@ -1,6 +1,6 @@
  public class employee1 {
     employee1(String name, int id){
-        System.out.println("the name of the employee is" +name+"and id is"+id);
+        System.out.println("the name of the employee is :" +name+"and id is"+id);
 
 
     }
