@@ -7,7 +7,7 @@ public class ThreadEx {
         try {
             th1.join();    //waits for MyThread1 Thread to execute and end rather die
         } catch (InterruptedException e) {   //catching exception if there any exception occurs
-            e.printStackTrace();   //printing the Exception
+            System.out.println(e);   //printing the Exception
         }
         MyThread2 t2 = new MyThread2();  //creating object of MyThread1
         t2.start();//to start the thread2
