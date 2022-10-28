@@ -4,23 +4,23 @@
  *
  */
 import java.util.Scanner; //importing scanner class
-public class Exceptiondemolab {//creating new class
-        public int addnum(int a,int b) {//method which takes two parameters as integer
-            if(a<0||b<0) {//logic for negative number
-                throw new ArithmeticException("m and n is not positive");//user defined exception
+public class Exceptiondemolab {  //creating new class
+        public int addnum(int a,int b) {  //method which takes two parameters as integer
+            if(a<0||b<0) {  //logic for negative number
+                throw new ArithmeticException("a and b is not positive");   //user defined exception
             }
             else {
                 return a+b;//returning the sum
             }
         }
         public static void main(String[] args) {
-            Scanner Scan=new Scanner(System.in);//creating object of scanner class
-            Exceptiondemolab a =new Exceptiondemolab();//creating object of ExceptionDemo class
-            System.out.println("enter the  values of m and n : ");
-            int m=Scan.nextInt();//taking input for m
-            int n=Scan.nextInt();//taking input for n
+            Scanner Sc=new Scanner(System.in);   //creating object of scanner class
+            Exceptiondemolab a =new Exceptiondemolab();   //creating object of ExceptionDemo class
+            System.out.println("enter the  values of x and y : ");
+            int x=Sc.nextInt();//taking input for x
+            int y=Sc.nextInt();//taking input for y
             try {
-                System.out.println("the result of product is : "+a.addnum(m, n));// to get the result
+                System.out.println("the result of product is : "+a.addnum(x, y));// to get the result
             } catch (Exception e) {
                 e.printStackTrace();//printing the Exception message
             }
