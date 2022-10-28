@@ -13,13 +13,13 @@ public class Exceptionproblem {
         public static void main(String[] args) {//main method
             Scanner scan=new Scanner(System.in);//object of Scanner class
             Exceptionproblem a=new Exceptionproblem();//creating object of ExceptionNew class
-            System.out.println("enter the input values of x and y : ");
+            System.out.println("enter the  values of x and y : ");
             int x=scan.nextInt();//taking input for a
             int y=scan.nextInt();//taking input for b
             try {
                 System.out.println("the result of product is : "+a.value(x, y));// to get the result
             } catch (Exception e) {
-                e.printStackTrace();//printing the Exception message
+                System.out.println(e);//printing the Exception message
             }
 	}
 }
