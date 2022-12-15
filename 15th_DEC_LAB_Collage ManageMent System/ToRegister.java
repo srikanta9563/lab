@@ -8,10 +8,11 @@ import java.util.Scanner;
 
 import Login.Helper;
 
- public class ToRegister {
+ public class ToRegister {  //Main class
     static Scanner sc = new Scanner(System.in);
     public static void generate(long sid, String password) throws SQLException {
-        System.out.println("Enter your first name : ");
+      // to select what operation to be done from user
+     System.out.println("Enter your first name : ");
         String fname = sc.next();
         System.out.println("Enter your last name : ");
         String lname = sc.next();
@@ -25,11 +26,13 @@ import Login.Helper;
         double per12 = sc.nextDouble();
         System.out.println("Enter your passing year(12th) : ");
         int yop = sc.nextInt();
-
+     //call getConnection() method
         Connection conn = Helper.con();
+     // declare the sql statement
         Statement stmt = conn.createStatement();
 
         PreparedStatement stmt1=conn.prepareStatement("insert into Registration values(?,?,?,?,?,?,?,?,?)");
+     // setting all inputs into db
         stmt1.setLong(1, sid);
         stmt1.setString(2, fname);
         stmt1.setString(3, lname);
